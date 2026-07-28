@@ -29,3 +29,20 @@ const reactElement = {
 const mainContainer = document.querySelector('#root')
 
 customRender(reactElement, mainContainer)
+
+
+now using react custom 
+isme transpiller apne ap injuct krta h
+const reactelemnet = React.createElement(
+    'a',
+    {href:"",target:""} ye attribute likhne ka trika h
+)
+
+variablesin jsx
+const p="p"
+return(
+    <p>text{p}<p> evaluate expression 
+)
+
+
+ui updation ko react contril krt ah
