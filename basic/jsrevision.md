@@ -18,6 +18,19 @@ Lexical Scope = Access kis variable ka milega.
 Closure = Un variables ko baad me bhi yaad rakhna
 
 Hoisting JavaScript ka behavior hai jisme variable aur function declarations ko execution se pehle memory me register kar diya jata hai.
+Q. Why can function declarations be called before they are defined, but arrow functions cannot?
+
+Answer:
+
+Function declarations are hoisted with their entire function body. Arrow functions are function expressions stored in variables, so they can only be used after the variable has been initialized.
+| Topic                       | `var`       | `let`            | `const`          | `function`          |
+| --------------------------- | ----------- | ---------------- | ---------------- | ------------------- |
+| Hoisted?                    | ✅ Yes       | ✅ Yes            | ✅ Yes            | ✅ Yes               |
+| Memory me kya jata hai?     | `undefined` | Variable (TDZ)   | Variable (TDZ)   | Pura function       |
+| Initialization              | `undefined` | Nahi             | Nahi             | Already initialized |
+| Declaration se pehle access | ✅ Haan      | ❌ Nahi           | ❌ Nahi           | ✅ Haan              |
+| Error                       | `undefined` | `ReferenceError` | `ReferenceError` | Koi error nahi      |
+
 
 Nahi. JavaScript me var, let, const aur function declarations sab hoist hote hain. Difference ye hai ki var undefined ke saath initialize hota hai, let aur const Temporal Dead Zone (TDZ) me rehte hain isliye declaration se pehle access nahi kiye ja sakte, aur function declarations ko declaration se pehle bhi call kiya ja sakta hai."
 
@@ -61,3 +74,7 @@ HTMLCollection ek live collection hoti hai, isliye DOM change hone par automatic
 Ab yahan children property use ki gayi hai.
 
 children hamesha HTMLCollection return karti hai.
+
+Kya V8 Engine browser ka part hai?
+
+Haan. V8 Engine Chrome browser ka JavaScript engine hai. Ye browser ka ek component hai jo JavaScript code ko execute karta hai
