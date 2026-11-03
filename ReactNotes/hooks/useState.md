@@ -118,6 +118,7 @@ State
 → re-render
 → UI update
 
+
 10. State ko directly change kyu nahi karte?
 ❌
 count = count + 1;
