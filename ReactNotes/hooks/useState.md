@@ -129,7 +129,6 @@ Isliye React state ko setter function ke through update karte hain.
 13. setState ka important behavior
 Agar new state previous state par depend karti hai, to functional update useful hota hai:
 setCount(prevCount => prevCount + 1);
-
 1. useState = React ka built-in Hook
 2. Functional Component = function jo UI return karta hai
 3. State = component ka changing data
